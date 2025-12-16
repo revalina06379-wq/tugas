@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seblak Mantap Jiwa - Sensasi Pedas yang Bikin Nagih!</title>
+    <style>
+        /* Reset dasar untuk konsistensi */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* --- General Styling --- */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6; /* Meningkatkan readability */
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0; /* Menggunakan rem untuk responsivitas */
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #d9534f; /* Merah Cabai */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 0.625rem; /* 10px dalam rem */
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 0.9375rem; /* 15px dalam rem */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #d9534f;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background-color: #d9534f;
+            color: white;
+            text-align: center;
+            padding: 5rem 1.25rem; /* 80px 20px dalam rem */
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.625rem; /* 10px */
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.875rem; /* 30px */
+        }
+
+        .cta-button {
+            background-color: #333;
+            color: white;
+            padding: 0.75rem 1.5625rem; /* 12px 25px */
+            text-decoration: none;
+            border-radius: 0.3125rem; /* 5px */
+            font-weight: bold;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #555;
+        }
+
+        /* --- Section Styling --- */
+        .container {
+            width: 90%; /* Lebih responsif dari 80% */
+            max-width: 1200px; /* Batas maksimal */
+            margin: 0 auto;
+            padding: 2.5rem 0; /* 40px */
+        }
+
+        h2 {
+            text-align: center;
+            color: #d9534f;
+            margin-bottom: 2.5rem; /* 40px */
+            font-size: 2rem;
+        }
+
+        /* --- Menu Section Styling --- */
+        #menu .menu-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1.25rem; /* 20px */
+        }
+
+        .menu-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 0.625rem; /* 10px */
+            padding: 1.25rem; /* 20px */
+            width: 100%;
+            max-width: 18.75rem; /* 300px */
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 4px 8px */
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-0.3125rem); /* -5px */
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* 8px 16px */
+        }
+
+        .menu-item h3 {
+            color: #d9534f;
+            margin-top: 0;
+            margin-bottom: 0.625rem; /* 10px */
+        }
+
+        .menu-item p {
+            color: #555;
+            font-size: 0.9rem;
+            margin-bottom: 0.9375rem; /* 15px */
+        }
+
+        .menu-item .price {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.3rem;
+            margin-top: 0.9375rem; /* 15px */
+        }
+
+        /* --- Gambar Menu (Diganti ke <img> untuk aksesibilitas) --- */
+        .seblak-image {
+            width: 100%;
+            height: 11.25rem; /* 180px */
+            object-fit: cover; /* Mengganti background-size */
+            border-radius: 0.5rem; /* 8px */
+            margin-bottom: 0.9375rem; /* 15px */
+            box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.15); /* 2px 2px 5px */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .seblak-image:hover {
+            transform: scale(1.03);
+        }
+
+        /* Media query untuk responsivitas menu di mobile */
+        @media (max-width: 768px) {
+            .menu-item {
+                max-width: 100%; /* Full width di mobile */
+            }
+            .hero h1 {
+                font-size: 2rem; /* Lebih kecil di mobile */
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.25rem 0; /* 20px */
+            margin-top: 2.5rem; /* 40px */
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0.3125rem 0; /* 5px */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Seblak Mantap Jiwa</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Cara Pesan</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main> <!-- Menggunakan <main> untuk semantik -->
+        <section id="home" class="hero"> <!-- Menambahkan id="home" -->
+            <h1>SEBLAK MANTAP JIWA</h1>
+            <p>Sensasi Pedas yang Bikin Nagih!</p>
+            <a href="#menu" class="cta-button">Lihat Menu Kami</a>
+        </section>
+
+        <section id="about" class="container">
+            <h2>🔥 Kenapa Harus Seblak Kami? 🔥</h2>
+            <p style="text-align: center; max-width: 50rem; margin: 0 auto;">Kami menggunakan <strong>bumbu racikan rahasia</strong> yang diolah dari cabai segar pilihan dan rempah-rempah otentik. Setiap level pedas disiapkan dengan standar kualitas tertinggi, menghasilkan kuah kental yang gurih, pedas, dan tak tertandingi! Dijamin bikin lidah bergoyang!</p>
+        </section>
+
+        <section id="menu" class="container">
+            <h2>🌶️ Menu Andalan Kami 🌶️</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <!-- Mengganti background-image dengan <img> untuk aksesibilitas -->
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV68HamPqc-E524T9EwHIm7wIXfxRILltgVg&s" alt="Gambar Seblak Komplit Spesial dengan kerupuk, makaroni, sosis, bakso, ceker, dan telur" class="seblak-image" loading="lazy">
+                    <h3>Seblak Komplit Spesial</h3>
+                    <p>Paduan kerupuk, makaroni, sosis, bakso, ceker, dan telur. Pedasnya nampol, kuahnya kental!</p>
+                    <p class="price">Rp 25.000</p>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="https://assets.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p3/141/2025/07/22/seblak-567424002.jpg" alt="Gambar Seblak Ceker Jeletot dengan ceker yang lembut dan bumbu pedas" class="seblak-image" loading="lazy">
+                    <h3>Seblak Ceker Jeletot</h3>
+                    <p>Khusus pecinta ceker, bumbu pedasnya bikin ketagihan sampai gigitan terakhir. Super lembut!</p>
+                    <p class="price">Rp 20.000</p>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/250/2024/10/03/Seblak-Cocol-Pedas-Manis-370353948-copy-2425573957.jpg" alt="Gambar Seblak Mie Kuah Pedas dengan mie instan dan bumbu gurih" class="seblak-image" loading="lazy">
+                    <h3>Seblak Mie Kuah Pedas</h3>
+                    <p>Mie instan pedas level dewa yang dimasak dengan bumbu seblak khas kami. Gurihnya pas!</p>
+                    <p class="price">Rp 18.000</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="order" class="container" style="text-align: center;">
+            <h2>🛒 Cara Pesan 🛒</h2>
+            <ol style="list-style-type: none; padding: 0;">
+                <li>1. Pilih Menu Favorit Anda di atas.</li>
+                <li>2. Tentukan Level Pedas Anda (Level 1 sampai Level 5).</li>
+                <li>3. Pesan melalui aplikasi Gofood/Grabfood (Cari: <strong>Seblak Mantap Jiwa</strong>).</li>
+                <li>4. Atau kunjungi langsung ke lokasi kami.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>Kontak Kami: (021) 123-4567 | WhatsApp: 0812-XXXX-XXXX</p>
+        <p>Jam Buka: Senin - Sabtu, 10.00 - 22.00 WIB</p>
+        <p>&copy; 2024 Seblak Mantap Jiwa. Semua Hak Dilindungi.</p>
+    </footer>
+</body>
+</html>
